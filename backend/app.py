@@ -4,8 +4,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-app = Flask(__name__)
+template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../frontend/templates'))
+app = Flask(__name__, template_folder=template_dir)
 
 client = MongoClient(os.getenv("MONGODB_URI"))
 db = client.test
