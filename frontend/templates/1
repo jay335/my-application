@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do Form</title>
+  <style>
+    body {
+      background-color: black;
+      color: yellow;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid yellow;
+      border-radius: 8px;
+    }
+    input, textarea, button {
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid yellow;
+      background-color: black;
+      color: yellow;
+    }
+    button {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>To-Do Form</h2>
+    <form action="/submittodoitem" method="POST">
+      <input type="text" name="itemName" placeholder="Item Name" required><br>
+      <textarea name="itemDescription" placeholder="Item Description" required></textarea><br>
+      <input type="number" name="itemId" placeholder="Item ID"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
